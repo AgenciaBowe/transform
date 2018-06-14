@@ -195,6 +195,9 @@ body{
     padding-top: 56.21052631578948%!important;
     transition-duration: 1s;
 }
+.arrow_home {
+    margin-bottom: 55px;
+}
 /*TENDENCIAS*/
 .hashtag {
     font-size: 81pt;
@@ -1290,9 +1293,13 @@ button.btn.nextBtn:active {
 	display: none;
 }
 input.ss-q-radio {
-		width: 28px;
-		height: 28px;
-	}
+    width: 28px;
+    height: 28px;
+}
+#resultado .card .cardflip_text {
+    font-size: 10pt;
+    padding: 7px;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
