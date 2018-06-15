@@ -72,6 +72,9 @@ body{
 .overflow-x-hidden{
 	overflow-x: hidden;
 }
+.overflow-y-hidden{
+	overflow-y: hidden;
+}
 /* TOPO */
 #topo {
     background-image: url(../images/topo.png);
@@ -217,7 +220,7 @@ body{
     width: 100%;
 }
 .tendencia_image_left .overflow-x-hidden {
-    height: 70vw;
+    height: 76vw;
 }
 .tendencia_image_left .overflow-x-hidden img{
     position:absolute;
@@ -1300,9 +1303,339 @@ input.ss-q-radio {
     font-size: 10pt;
     padding: 7px;
 }
+@media only screen 
+and (max-device-width : 340px) {
+    #topo {
+		background-image: url(../images/topo.png);
+		background-size: contain;
+		background-position-x: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#topo .row {
+		align-items: center;
+		justify-content: center;
+	}
+	.card {
+		height: 570px;
+	}
+	input.ss-q-radio {
+		width: 28px;
+		height: 28px;
+	}
+	#maisdigital .card {
+        height: 428px!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        margin-bottom: 10px;
+        width: 88%;
+    }
+	.quiz_checkbox .checkmark:after {
+		top: 7px;
+    }
+    .cardflip_text {
+        font-size: 11pt;
+        line-height: 21px;
+    }
+    .newsletter .row {
+        margin: auto;
+    }
+    #macro_tendencias .tendencia > .col-12:not(.overflow-x-hidden) {
+        padding: 0 20px!important;
+    }
+    .title_redessociais span {
+        font-size: 22pt;
+    }
+    .subtitle {
+        font-size: 18pt!important;
+        padding: 10px;
+    }
+	.step {
+		width: 100%!important;
+		margin: 0px 0px!important;
+		padding: 0px!important;
+	}
+	.step .questions {
+		width: 100%!important;
+		padding: 10px 10px 50px 10px;
+		float: left;
+	}
+	.branch.wizard-branch .step {
+		height: auto!important;
+    }
+    .step.wizard-step .ss-scalerow {
+        padding: 2px;
+    }
+    .radio_level5{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #title_resultado {
+        font-size: 3rem;
+    }
+	div#example-3 .navigation {
+		margin-top: 50px!important;
+	}
+	label.quiz_checkbox {
+		font-size: 1rem;
+	}
+	.topo_transforme {
+        line-height: 65px;
+        margin-top: 100px;
+    }
+	.topo_transforme {
+        font-size: 4rem;
+    }
+    .arrow_home {
+        margin-top: 40px;
+    }
+	.topo_seu {
+        font-size: 3.5rem;
+        line-height: 19px;
+	}
+	.topo_negocio {
+        font-size: 3.5rem;
+        line-height: 50px;
+	}
+	.button_geral {
+		font-size: 1rem;
+	}
+	.title {
+		font-size: 2rem;
+		width: 100%!important;
+	}
+	.small_topo {
+        font-size: 1.2rem;
+	}
+	#macro_tendencias .row {
+		width: 100%;
+		margin: 0px!important;
+	}
+	.tendencias_titulo {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+	}
+	.button_white {
+        padding: 9px;
+        width: 100%;
+        font-size: 15pt;
+    }
+    #topo .button_white {
+        font-size: 1.5rem;
+        padding: 2px 25px;
+    }
+    .device-iphone-x {
+        margin-left: -53px;
+        transform: scale(0.7);
+    }
+    #sociais .order-2, #sociais #iphone-x, #sociais .column {
+        padding: 0px;
+    }
+    .device-iphone-x {
+        margin-left: -53px!important;
+        transform: scale(0.7)!important;
+        margin-top: -86px;
+    }
+    #iphone-x {
+        height: 529px!important;
+    }
+	.tendencia {
+		width: 100%;
+		margin: 0;
+	}
+	.tendencia div img {
+		width: 100%;
+	}
+	.tendencia_image_left .overflow-x-hidden {
+		height: auto;
+		overflow: initial;
+		margin-bottom: 40px;
+	}
+	.tendencia .order-1 {
+		padding-right: 0px;
+		padding: 0px!important;
+		flex: 100%!important;
+	}
+	.tendencia .order-2 {
+		margin-top: 50px!important;
+	}
+	.device-iphone-x {
+		margin-left: -78px;
+        transform: scale(0.76);
+        margin-top: -88px;
+    }
+    #sociais .order-1 {
+        margin-top: 0px!important;
+    }
+    #maisdigital #maisdigitaltabs {
+        padding-bottom: 0px!important;
+    }
+    #confirm_button{
+        width: 100%!important;
+        margin-left: 0;
+    }
+	#explore {
+		background-image: url(../images/explore.svg);
+		background-position-x: center;
+		padding-top: 73px;
+		padding-bottom: 50px;
+	}
+	.newsletter input {
+		width: 100%;
+	}
+	#macro_tendencias .container-fluid {
+		padding: 0;
+	}
+	.video-js .vjs-big-play-button {
+		margin-left: -2em!important;
+	}
+	#maisdigitaltabs ul li:not(last-child) {
+		margin-right: 0px;
+		width:100%;
+    }
+    #maisdigitaltabs ul li a {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 5vw;
+        color: #6a6c6b;
+        text-decoration: none;
+        margin-top: 13px;
+    }
+	#maisdigital {
+		box-shadow: none;
+	}
+	#maisdigitaltabs .front {
+        width: 100%;
+        height: 428px;
+        z-index: 2;
+    }
+    #maisdigitaltabs .back {
+        width: 100%;
+        height: 428px;
+    }
+	.card img {
+        width: 100%;
+        height: 100%;
+	}
+	#explore .title {
+		letter-spacing: 30px;
+		text-align: center;
+		text-indent: 0.5em;
+	}
+	.explore_conteudos .conteudos {
+        margin: 5px 0!important;
+    }
+    #maisdigital .title {
+        font-size: 22pt;
+    }
+    #maisdigital .subtitle {
+        font-size: 14pt;
+    }    
+	#maisdigitaltabs ul li a {
+		width: 100%;
+		float: left;
+    }
+    .checkmark {
+        margin-right: 12px;
+    }
+	#quiz .setup-content:not(first-child) {
+        background-size: cover!important;
+        background-position-x: center;
+        background-position-y: 162px;
+    }
+	#step-1 {
+		background-position-x: center!important;
+		background-position-y: 275px!important;
+	}
+	#step-1 img {
+		width: 100%!important;
+	}
+	.btn-green.nextBtn {
+		width: 50%;
+	}
+	.btn.prevBtn {
+		width: 40%;
+	}
+	.nextBtn.float-right {
+		width: 40%;
+		margin: -1px 0px!important;
+		padding: 6px;
+	}
+	.setup-content .modal-body {
+		width: 100%!important;
+		padding-top:0px!important;
+		height: auto;
+	}
+	.modal-body .questions {
+		width: 100%!important;
+		float: left;
+		padding-bottom: 50px;
+	}
+	#step-6 .btn-green, #step-21 .btn-green{
+		width:40%;
+	}
+	#quiz #step-33 {
+		height: 100vh;
+	}
+	#step-33 .nav-tabs li {
+		width:100%;
+	}
+	.marker_item .marker_gradient {
+		width: 40px;
+		float: left;
+	}
+	.marker_item span:nth-child(2) {
+        float: left;
+        width: 76%;
+        text-align: left;
+        margin-left: 15px;
+    }
+	section#macro_tendencias button.botaoverde {
+		margin-top: 17px;
+	}
+	label.quiz_checkbox span:first-child {
+		float: right;
+		width: 88%;
+    }
+    .range {
+        width: 75%;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .setup-content .range__amount {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .ms-parent {
+        margin-bottom: 90px;
+    }
+	.card_vejamais{
+		display: block!important;
+	}
+	#resultado .tab-content .card {
+		height: 497.86px!important;
+	}
+	div#example-3 .navigation {
+		width: 89%;
+    }
+    .card_container:hover .card {
+        -webkit-transform: none;
+    }
+    .card_container:hover .card .front {
+        opacity: 0;
+        z-index:-1!important;
+    }
+    #conteudo_resultado {
+        padding: 15px;
+        line-height: 17pt;
+        font-size: 14pt;
+        float: left;
+        margin-top: 25px;
+    }
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 320px) 
+and (min-device-width : 340px) 
 and (max-device-width : 480px) {
 	#topo {
 		background-image: url(../images/topo.png);
@@ -1363,7 +1696,7 @@ and (max-device-width : 480px) {
 	}
 	.topo_transforme {
         line-height: 65px;
-        margin-top: 175px;
+        margin-top: 100px;
     }
 	.topo_transforme {
 		font-size: 5rem;
@@ -1590,7 +1923,9 @@ and (max-device-width : 480px) {
         z-index:-1!important;
     }
     #conteudo_resultado {
-        padding: 15px;
+        padding: 12px;
+        float: left;
+        margin-top: 40px;
     }
 }
 
@@ -1612,9 +1947,6 @@ and (max-width : 320px) {
 		margin-left: auto!important;
 		margin-right: auto!important;
 	}
-	.marker_item .botaoverde {
-		float: left;
-	}
 	#maisdigital .card {
 	    height: 475px;
 	}
@@ -1623,9 +1955,9 @@ and (max-width : 320px) {
 		transform: scale(0.5);
 	}
 	label.quiz_checkbox span:first-child {
-		float: right;
-		width: 82%;
-	}
+        float: right;
+        width: 86%;
+    }
 	.setup-content .range__amount {
 		width: 100%;
 		margin-bottom: 50px;
