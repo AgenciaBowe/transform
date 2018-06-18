@@ -42,6 +42,11 @@ body{
 .mb-10 {
     margin-bottom: 10rem;
 }
+@media (min-width: 992px) { 
+    .pl-lg-10{
+        padding-left: 10rem!important;
+    }
+}
 .color-white{
 	color:#fff;
 }
@@ -2147,11 +2152,10 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-/* Styles */
+
 }
 
 /* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
+@media (min-width : 1824px) {
 /* Styles */
 }
