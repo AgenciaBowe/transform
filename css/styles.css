@@ -956,7 +956,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 div#example-3 .navigation {
     margin-top: 84px!important;
-    margin: 25px;
+    margin: 0 25px;
     float: left;
     width: 94%;
 }
