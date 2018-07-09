@@ -557,6 +557,7 @@ button.white_transparent{
     -moz-transition: opacity .5s ease-out;
     -webkit-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
+	z-index:-1;
 }
 .cardflip_title {
     float: left;
