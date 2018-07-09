@@ -2194,12 +2194,9 @@
 							return branch;
 						},
 						lastmpe: function( state, action ) {
-							$('#elqFormName').val('form_quiz');
-							$('.modal_quiz').attr('id', 'form73');
-
 							var usointernet = $('input[name=usointernet]:checked').val();
-							var somausointernet = (10*usointernet)/100;
-							
+							var somausointernet = (10*usointernet)/5;
+							console.log('Uso da Internet: '+somausointernet);
 							var qtdsistemasdigitais = $('input[name=qtdsistemasdigitais]:checked').val();
 							var somaqtdsistemasdigitais = 0;
 							if(qtdsistemasdigitais == 'Sim, via cabos'){
@@ -2209,7 +2206,7 @@
 							}else if(qtdsistemasdigitais == 'Sim, via cabos e Wi-Fi'){
 								var somaqtdsistemasdigitais = 3;
 							}
-							
+							console.log('Sistemas Digitais: '+somaqtdsistemasdigitais);
 							var colaboradoresemail = $('input[name=colaboradoresemail]:checked').val();
 							var somacolaboradoresemail = 0;
 							if(colaboradoresemail == 'Sim, eles são personalizados'){
@@ -2219,8 +2216,9 @@
 							}else if(colaboradoresemail == 'Não possuem e-mails'){
 								var somacolaboradoresemail = 0;
 							}
-							
-							var armazenamentodigital = $('input[name=armazenamentodigital]:checked').val();
+							console.log('Colaboradores email: '+somacolaboradoresemail);
+
+							var armazenamentodigital = $('input[name=meiosarmazenamentodigital]:checked').val();
 							var somaarmazenamentodigital = 0;
 							if(armazenamentodigital == 'Não há armazenamento digital dos arquivos da empresa'){
 								var somaarmazenamentodigital = 0;
@@ -2233,9 +2231,9 @@
 							}else if(armazenamentodigital == 'Armazenamento em servidores locais ou em data centers'){
 								var somaarmazenamentodigital = 5;
 							}
-							
-							var copiasdeseguranca = $("#copiasdeseguranca input:checked").map(function(i,el){return el.name;}).get(); //vazio
-							var copiasdeseguranca = copiasdeseguranca.join(";");
+							console.log('Armazenamento digital: '+somaarmazenamentodigital);
+
+							var copiasdeseguranca = $("[name=copiasdeseguranca]:checked").val(); //vazio
 							var somacopiasdeseguranca = 0;
 							if(copiasdeseguranca == 'Nuvem'){
 								var somacopiasdeseguranca = 16;
@@ -2244,7 +2242,8 @@
 							}else if(copiasdeseguranca == 'Servidores locais ou data centers'){
 								var somacopiasdeseguranca = 3	;
 							}
-							
+							console.log('Copias de segurança: '+somacopiasdeseguranca);
+
 							var softwaregestao = $('input[name=softwaregestao]:checked').val();
 							var somasoftwaregestao = 0;
 							if(softwaregestao == 'Sim e foi instalado localmente nas máquinas da empresa'){
@@ -2256,61 +2255,67 @@
 							}else if(softwaregestao == 'Não sei o que é um sistema de gestão'){
 								var somasoftwaregestao = 0;
 							}
+							console.log('Software de Gestão: '+somasoftwaregestao);
 
 							var ambientesdigitaisinserida = $("#ambientesdigitaisinserida input:checked").map(function(i,el){return el.name;}).get();
 							var ambientesdigitaisinserida = ambientesdigitaisinserida.join(";");
 							var somaambientesdigitaisinserida = 0;
 							if(ambientesdigitaisinserida.includes('Site')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 8;
 							} 
 							if(ambientesdigitaisinserida.includes('Loja online')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 16;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 14;
 							}
 							if(ambientesdigitaisinserida.includes('Aplicativos')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 10;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 8;
 							}
 							if(ambientesdigitaisinserida.includes('WhatsApp')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 8;
 							}
 							if(ambientesdigitaisinserida.includes('Facebook')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
 							}
 							if(ambientesdigitaisinserida.includes('Instagram')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
 							}
 							if(ambientesdigitaisinserida.includes('LinkedIn')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
 							}
 							if(ambientesdigitaisinserida.includes('Classificados online')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
 							}
 							if(ambientesdigitaisinserida.includes('Outros')){
-								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 2;
+								somaambientesdigitaisinserida = somaambientesdigitaisinserida + 5;
 							}
+							console.log('Ambientes Digitais: '+somaambientesdigitaisinserida);
 							
 							var pabx = $('input[name=pabx]:checked').val();
 							var somapabx = 0;
-							if(pabx == 'sim'){
-								somapabx = 10;
-							}else{
-								somapabx = 0;
-							}
-							
-							var tdbomnegocio = $('input[name=tdbomnegocio]:checked').val();
 							if(pabx == 'Sim'){
 								somapabx = 10;
 							}else{
 								somapabx = 0;
 							}
+							console.log('PABX: '+somapabx);
+							
+							var tdbomnegocio = $('input[name=tdbomnegocio]:checked').val();
+							if(tdbomnegocio == 'Sim'){
+								somatdbomnegocio = 5;
+							}else{
+								somatdbomnegocio = 0;
+							}
+							console.log('TD BOM NEGÓCIO: '+ somatdbomnegocio);
 							
 							var experienciacompra = $('input[name=experienciacompra]:checked').val();
 							var somaexperienciacompra = (12*experienciacompra)/5;
+							console.log('Experiencia da compra: '+somaexperienciacompra);
 							
 							var implementatd = $('input[name=implementatd]:checked').val();
-							var somaimplementatd = (5*implementatd)/100;
+							var somaimplementatd = implementatd;
+							console.log('Implementa TD: '+somaimplementatd);
 							
 							somaoperacional = 5 + Number(somausointernet) + Number(somaqtdsistemasdigitais) + Number(somacolaboradoresemail) + Number(somaarmazenamentodigital) + Number(somacopiasdeseguranca) + Number(somasoftwaregestao);
-							somaexperiencia = Number(somaambientesdigitaisinserida) + Number(somapabx) + Number(somapabx) + Number(somaexperienciacompra) + Number(somaimplementatd);
+							somaexperiencia = Number(somaambientesdigitaisinserida) + Number(somapabx) + Number(somatdbomnegocio) + Number(somaexperienciacompra) + Number(somaimplementatd);
 							
 							
 							if(somaexperiencia <= 59){
@@ -2328,7 +2333,7 @@
 									$('#card-office365').show();
 								}
 							}else {
-								if(somaoperacional >= 59){
+								if(somaoperacional <= 59){
 									var titulo = 'Encantadoras';
 									var conteudo = 'Você certamente sabe como agradar seu cliente com o digital. Sua empresa deve levar a sério a experiência do consumidor, isso é ótimo. No entanto, não se esqueça de investir no operacional de seu negócio, otimizando, assim, o tempo e aumentando a produção ;). Procure softwares, plataformas e tecnologias que possam te auxiliar com isso. Conheça algumas das nossas soluções na nuvem.';
 									$('#card-elasticcloud').show();
@@ -2382,13 +2387,15 @@
 							return branch;
 						},
 						lastmge: function( state, action ) {
-							$('input[name=elqFormName]').val('[FORM]Quiz-1527258480130');
-							$('.modal_quiz').attr('id', 'form74');
 							/* EXPERIENCIA OPERACIONAL*/
 							var unidades_empresa = $('input[name=unidades_empresa]').val();
+							var somaunidades_empresa = (5*unidades_empresa)/10;
+							
+
 							var estados_presente = $('select[name=estados_presente]').val();
 							var tipoconsumidor = $('input[name=tipoconsumidor]:checked').val();
 							var usointernet = $('input[name=usointernet]:checked').val();
+							
 							var filiaisconectadas = $('input[name=filiaisconectadas]:checked').val();
 							var pabx = $('input[name=pabx]:checked').val();
 							var infraempresa = $('input[name=infraempresa]:checked').val();
@@ -2397,12 +2404,14 @@
 							var notadigitalizados = $('input[name=notadigitalizados]').val();
 							var qtdsistemas = $('input[name=qtdsistemas]:checked').val();
 							var notaintegracaosistemas = $('input[name=notaintegracaosistemas]').val();
+							
 							if(estados_presente.includes('MU')){
 								var somaestados = 5;
 							}else{
 								var somaestados = 0;
 							}
 							
+
 							if(filiaisconectadas == 'linkdados'){
 								var somafiliaisconectadas = 2;
 							}else if(filiaisconectadas == 'mpls'){
@@ -2410,6 +2419,7 @@
 							}else{
 								var somafiliaisconectadas = 0;
 							}
+							
 							
 							if(infraempresa == 'datacenterproprio'){
 								var somainfraempresa = 1;
@@ -2423,6 +2433,7 @@
 								var somainfraempresa = 20;
 							}
 							
+
 							if(locaisarmazenagem == 'Nuvem'){
 								var somalocaisarmazenagem = 5;
 							}else if(locaisarmazenagem == 'HDs externos e/ou Pendrives'){
@@ -2435,10 +2446,13 @@
 							
 							var somanotadigitalizados = (16*notadigitalizados)/100;
 							var somapercentnotaintegracao = (16*notaintegracaosistemas)/100;
-							
+						
 							if(qtdsistemas == '20 Sistemas'){
 								var somaqtdsistemas = 5;
+							}else{
+								var somaqtdsistemas = 0;
 							}
+							
 							/* EXPERIENCIA DO CLIENTE*/
 							
 							var ambientesdigitais = $("#ambientesdigitais input:checked").map(function(i,el){return el.name;}).get();
@@ -2452,6 +2466,7 @@
 							}else{
 								somaprodutosservicos100digitais = 0;
 							}
+							
 							var pabx = $('input[name=pabx]:checked').val();
 							var somapabx = 0;
 							if(pabx == 'sim'){
@@ -2491,7 +2506,7 @@
 							
 							var soma = 0;
 
-							somaoperacional = 5 + Number(somaestados) + Number(usointernet) + Number(somafiliaisconectadas) + Number(somainfraempresa) + Number(somanotadigitalizados) + Number(somapercentnotaintegracao);
+							somaoperacional = 5 + Number(somaestados) + Number(usointernet) + Number(somafiliaisconectadas) + Number(somainfraempresa) + Number(somalocaisarmazenagem) + Number(somanotadigitalizados) + Number(somaqtdsistemas) + Number(somapercentnotaintegracao);
 							somaexperiencia = Number(somaambientesdigitais) + Number(somaexperienciacompra) + Number(somaprodutosservicos100digitais) + Number(somapabx);
 							
 							
@@ -2509,7 +2524,7 @@
 									$('#card-office365').show();
 								}
 							}else{
-								if(somaoperacional >= 59){
+								if(somaoperacional <= 59){
 									var titulo = 'Encantadoras';
 									var conteudo = 'Sua empresa certamente busca soluções para encantar e atender da melhor forma seu cliente com o digital. Levam a sério a experiência do consumidor, isso é ótimo. No entanto, sempre há mais oportunidades para melhorar a operacionalização do seu negócio, otimizando custos, tempo e aumentando a produção ;). Procure softwares, plataformas e tecnologias que possam te auxiliar com isso. Conheça as soluções de Cloud da Algar Telecom que podem contribuir nessa etapa. ';
 									$('#card-elasticcloud').show();
