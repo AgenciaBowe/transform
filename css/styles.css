@@ -494,6 +494,10 @@ button.white_transparent{
     width: 60%;
 	color: #1b5e39;
 	text-align: center;
+	text-decoration:none!important;
+}
+.cardflip_button:hover {
+    color: #ffffff!important;
 }
 .cardflip_title {
     float: left;
