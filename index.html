@@ -2385,8 +2385,7 @@
 							var filiaisconectadas = $('input[name=filiaisconectadas]:checked').val();
 							var pabx = $('input[name=pabx]:checked').val();
 							var infraempresa = $('input[name=infraempresa]:checked').val();
-							var locaisarmazenagem = $("#locaisarmazenagem input:checked").map(function(i,el){return el.name;}).get(); //vazio
-							var locaisarmazenagem = locaisarmazenagem.join(";");
+							var locaisarmazenagem = $("#locaisarmazenagem input:checked").val();
 							var notadigitalizados = $('input[name=notadigitalizados]').val();
 							var qtdsistemas = $('input[name=qtdsistemas]:checked').val();
 							var notaintegracaosistemas = $('input[name=notaintegracaosistemas]').val();
@@ -2491,6 +2490,20 @@
 							}
 							
 							var soma = 0;
+							console.log('Estados:' + somaestados);
+							console.log('Uso da internet:' + usointernet);
+							console.log('Filiais conectadas:' + somafiliaisconectadas);
+							console.log('Infra TI:' + somainfraempresa);
+							console.log('Backup:' + somalocaisarmazenagem);
+							console.log('Digitalizados:' + somanotadigitalizados);
+							console.log('Qtd de Sistemas:' + somaqtdsistemas);
+							console.log('Integração:' + somapercentnotaintegracao);
+							console.log('-----Experiencia-----');
+							console.log('Ambientes Digitais:' + somaambientesdigitais);
+							console.log('Experiencia de compra:' + somaexperienciacompra);
+							console.log('Produtos 100% digitais:' + somaprodutosservicos100digitais);
+							console.log('PABX:' + somapercentnotaintegracao);
+							
 
 							somaoperacional = 5 + Number(somaestados) + Number(usointernet) + Number(somafiliaisconectadas) + Number(somainfraempresa) + Number(somalocaisarmazenagem) + Number(somanotadigitalizados) + Number(somaqtdsistemas) + Number(somapercentnotaintegracao);
 							somaexperiencia = Number(somaambientesdigitais) + Number(somaexperienciacompra) + Number(somaprodutosservicos100digitais) + Number(somapabx);
