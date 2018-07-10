@@ -2240,7 +2240,7 @@
 							var softwaregestao = $('input[name=softwaregestao]:checked').val();
 							var somasoftwaregestao = 0;
 							if(softwaregestao == 'Sim e foi instalado localmente nas máquinas da empresa'){
-								var somasoftwaregestao = 8;
+								var somasoftwaregestao = 5;
 							}else if(softwaregestao == 'Sim e está na nuvem'){
 								var somasoftwaregestao = 26;
 							}else if(softwaregestao == 'Não possuo software de gestão na minha empresa'){
@@ -2305,8 +2305,8 @@
 							somaexperiencia = Number(somaambientesdigitaisinserida) + Number(somapabx) + Number(somatdbomnegocio) + Number(somaexperienciacompra) + Number(somaimplementatd);
 							
 							
-							if(somaexperiencia <= 59){
-								if(somaoperacional <=59){
+							if(somaexperiencia <= 49){
+								if(somaoperacional <=49){
 									var titulo = 'Tradicional';
 									var conteudo = 'Você certamente começou já faz alguns bons anos, tem experiência de mercado e muito conhecimento sobre o seu negócio, mas, pode ser que já esteja percebendo uma certa dificuldade em conversar com seu consumidor, não é? Bom, isso ocorre devido a vários fatores, um agravante é a Transformação Digital, que vem mudando a forma com que as empresas e os consumidores se comunicam e realizam tarefas. O ambiente digital otimizou os processos que antes levavam muito tempo para serem concluídos, além do mais, a distância da sua empresa com seu consumidor pode ficar bem menor com o auxílio da tecnologia, aumentando assim sua produtividade. Conheça alguns de nossos serviços que podem te ajudar a iniciar essa transformação. ';
 									$('#card-internetlink').show();
@@ -2320,7 +2320,7 @@
 									$('#card-office365').show();
 								}
 							}else {
-								if(somaoperacional <= 59){
+								if(somaoperacional <= 49){
 									var titulo = 'Encantadoras';
 									var conteudo = 'Você certamente sabe como agradar seu cliente com o digital. Sua empresa deve levar a sério a experiência do consumidor, isso é ótimo. No entanto, não se esqueça de investir no operacional de seu negócio, otimizando, assim, o tempo e aumentando a produção ;). Procure softwares, plataformas e tecnologias que possam te auxiliar com isso. Conheça algumas das nossas soluções na nuvem.';
 									$('#card-elasticcloud').show();
@@ -2375,7 +2375,7 @@
 						lastmge: function( state, action ) {
 							/* EXPERIENCIA OPERACIONAL*/
 							var unidades_empresa = $('input[name=unidades_empresa]').val();
-							var somaunidades_empresa = (5*unidades_empresa)/10;
+							var somaunidades_empresa = (5*unidades_empresa)/100;
 							
 
 							var estados_presente = $('select[name=estados_presente]').val();
