@@ -2490,16 +2490,16 @@
 							}
 							
 							var soma = 0;
-							console.log('Estados:' + somaestados);
+							console.log('Estados presente:' + somaestados);
 							console.log('Uso da internet:' + usointernet);
-							console.log('Filiais conectadas:' + somafiliaisconectadas);
-							console.log('Infra TI:' + somainfraempresa);
+							console.log('Filiais interconectadas:' + somafiliaisconectadas);
+							console.log('Infraestrutura de TI:' + somainfraempresa);
 							console.log('Backup:' + somalocaisarmazenagem);
-							console.log('Digitalizados:' + somanotadigitalizados);
+							console.log('Processos Operacionais digitalizados:' + somanotadigitalizados);
 							console.log('Qtd de Sistemas:' + somaqtdsistemas);
-							console.log('Integração:' + somapercentnotaintegracao);
+							console.log('Integração dos sistemas:' + somapercentnotaintegracao);
 							console.log('-----Experiencia-----');
-							console.log('Ambientes Digitais:' + somaambientesdigitais);
+							console.log('Ambientes Digitais inserida:' + somaambientesdigitais);
 							console.log('Experiencia de compra:' + somaexperienciacompra);
 							console.log('Produtos 100% digitais:' + somaprodutosservicos100digitais);
 							console.log('PABX:' + somapercentnotaintegracao);
@@ -2509,8 +2509,8 @@
 							somaexperiencia = Number(somaambientesdigitais) + Number(somaexperienciacompra) + Number(somaprodutosservicos100digitais) + Number(somapabx);
 							
 							
-							if(somaexperiencia <= 59){
-								if(somaoperacional <=59){
+							if(somaexperiencia <= 49){
+								if(somaoperacional <=49){
 									var titulo = 'Tradicional';
 									var conteudo = 'Sua empresa começou já faz alguns bons anos, ela tem experiência de mercado e muito conhecimento sobre o mundo corporativo, mas, pode ser que já tenha notado uma certa dificuldade em conversar com seu consumidor. Isso ocorre devido a vários fatores, um agravante é a Transformação Digital, que vem mudando a forma com que as empresas e os consumidores se comunicam e realizam tarefas. O ambiente digital otimizou os processos que antes levavam muito tempo para serem concluídos, além do mais, a distância do mundo corporativo com o consumidor final reduziu com auxílio da tecnologia, aumentando assim sua produtividade. Conheça alguns de nossos serviços que podem ajudar sua empresa a iniciar essa transformação.';
 									$('#card-internetlink').show();
@@ -2523,7 +2523,7 @@
 									$('#card-office365').show();
 								}
 							}else{
-								if(somaoperacional <= 59){
+								if(somaoperacional <= 49){
 									var titulo = 'Encantadoras';
 									var conteudo = 'Sua empresa certamente busca soluções para encantar e atender da melhor forma seu cliente com o digital. Levam a sério a experiência do consumidor, isso é ótimo. No entanto, sempre há mais oportunidades para melhorar a operacionalização do seu negócio, otimizando custos, tempo e aumentando a produção ;). Procure softwares, plataformas e tecnologias que possam te auxiliar com isso. Conheça as soluções de Cloud da Algar Telecom que podem contribuir nessa etapa. ';
 									$('#card-elasticcloud').show();
