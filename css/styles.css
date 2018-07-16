@@ -1020,10 +1020,6 @@ button.btn.nextBtn:active {
     font-size: 1.3rem;
     padding: 6px;
 }
-.select-question:focus {
-    outline: none;
-    box-shadow: none;
-}
 #navdiv ul {
     margin-bottom: 19px;
 }
@@ -1194,10 +1190,6 @@ button.btn.nextBtn:active {
 }
 .modal-footer>:not(:first-child) {
     margin-left: 2rem;
-}
-#quiz input {
-    outline: none;
-    box-shadow: none;
 }
 .step input {
     font-size: 11pt;
