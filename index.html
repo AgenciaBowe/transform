@@ -1902,7 +1902,14 @@
 								alert( "Por favor digite seu email para continuar." );
 								var branch = 'step-3';
 							}else{
-								var branch = 'step-4';
+								var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    							if(re.test(String(email).toLowerCase()) == true){
+									var branch = 'step-4';
+								}else{
+									alert('Digite um email válido!')
+									var branch = 'step-3';
+								}
+								
 							}
 							return branch;
 						},
