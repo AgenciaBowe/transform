@@ -2615,22 +2615,18 @@
 
             var validation = $("#form75 input").val().length;
             if(validation > 0){
-				$('#confirm_newsletter_send').show();
+				
 				var serialized = $("#form75").serialize();
 				jQuery.ajax({
 					type : "post",
 					url: 'https://s1656554376.t.eloqua.com/e/f2',
 					data: $("#form75").serialize(),
 
-					beforeSend: function() {
-						request.setRequestHeader("Authorization", 'Basic QWxnYXJUZWNoXFJhcGhhZWwuUm9zYTpSWW1pYkppc3BvcE95bTc=');
-						request.setRequestHeader("Content-Type", 'application/x-www-form-urlencoded');
-					},
 
 					complete: function() {},
 
 					success: function(data) {
-						$('#modal').show();
+						$('#confirm_newsletter_send').show();
 					},
 
 					error: function(){
