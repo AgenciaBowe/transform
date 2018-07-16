@@ -680,7 +680,7 @@
 	  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div id="example-3" class="setup-content" style="background-image: url(images/fundo-quiz1.png);">
-				<form role="form" class="modal_quiz" action="" method="post">
+				<form role="form" class="modal_quiz" action="" method="post" id="form74">
 					<div id="headermodal" class="modal-header text-center" style="display:block">
 						<h1 class="title"><span class="ralleway_bold">QUIZ</span></h1>
 						<hr class="hr_gradient mx-auto"></hr>
@@ -2337,11 +2337,11 @@
 								}
 							}
 							$('input[name=quadranteTD1]').val(titulo);
-							var serialized = $("#form73").serialize();
+							var serialized = $("#form74").serialize();
 							jQuery.ajax({
                                 type : "post",
                                 url: 'https://s1656554376.t.eloqua.com/e/f2',
-                                data: $("#form73").serialize(),
+                                data: $("#form74").serialize(),
             
                                 beforeSend: function() {
                                     $('.loader').fadeIn(300);
@@ -2373,6 +2373,8 @@
 							return branch;
 						},
 						lastmge: function( state, action ) {
+							$('input[name=elqFormName]').val('[FORM]Quiz-1527258480130');
+
 							/* EXPERIENCIA OPERACIONAL*/
 							var unidades_empresa = $('input[name=unidades_empresa]').val();
 							var somaunidades_empresa = (5*unidades_empresa)/100;

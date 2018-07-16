@@ -1017,6 +1017,14 @@ button.btn.nextBtn:active {
     font-weight: 700;
     color: #606060;
     font-size: 1.3rem;
+    padding: 6px;
+}
+.select-question:focus {
+    outline: none;
+    box-shadow: none;
+}
+#navdiv ul {
+    margin-bottom: 19px;
 }
 .modal-footer {
     padding: 20px 20px;
@@ -1162,7 +1170,7 @@ button.btn.nextBtn:active {
 
 .quiz_checkbox .checkmark:after {
     left: 10px;
-    top: 10px;
+    top: 7px;
     width: 5px;
     height: 10px;
     border: solid white;
@@ -1185,6 +1193,17 @@ button.btn.nextBtn:active {
 }
 .modal-footer>:not(:first-child) {
     margin-left: 2rem;
+}
+#quiz input {
+    outline: none;
+    box-shadow: none;
+}
+.step input {
+    font-size: 11pt;
+}
+.ss-scalenumbers {
+    font-size: 2em;
+    padding-bottom: 6px;
 }
 .nextBtn {
     background: -moz-linear-gradient(left, #a8ffe9 0%, #00ff60 100%);
